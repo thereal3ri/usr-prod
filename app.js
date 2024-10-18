@@ -10,6 +10,13 @@ app.use(
 
 app.use("/api/v1/users", userRouter);
 
+app.get("/", (req, res, next) => {
+  res.status(200).json({
+    status: success,
+    message: "Welcome to usr-prod",
+  });
+});
+
 app.use((err, req, res, next) => {
   const statusCode = err.statusCode || 500;
   const status = err.message || "error";
