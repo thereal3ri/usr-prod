@@ -6,3 +6,5 @@ router.route("/").get(findAll).post(create);
 router.route("/:id").get(findOne).patch(updateOne).delete(deleteOne);
 
 module.exports = router;
+
+// user routes
